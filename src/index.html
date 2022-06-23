@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Agenda Pessoal</title>
+    <link href="calendario.css" rel="stylesheet">
+    <script async src="calendario.js"></script>
+    <meta charset = "UTF-8"></meta>
+  </head>
+  <body>
+
+    <!-- CONTACTOS -->
+    <aside>
+      <div id="formDiv">
+        <form id="NumForm">
+            <h1>Contactos</h1>
+            <label for="Fname" >Nome</label>
+            <input type="text" id="Fname" placeholder="Primeiro Nome" required autofocus>
+            <input type="text" id="Lname" placeholder="Último Nome" required><br><br>
+            <label for="Num" >Número</label>
+            <input type="text" id="Num" placeholder="Número de tlm" required>
+            <button type="submit">Guardar Contacto</button>
+        </form>
+        <br>
+        <label for="retrieveNum" >Procurar Contacto</label>
+        <input type="text" id="retrieveNum" placeholder="Contacto" required>
+        <button id="retrieveButton">Procurar</button>
+        <br>
+        <div id="retrieve"></div>
+        <br>
+        <label for="removeNum" >Remover Número</label>
+        <input type="text" id="removeNum" placeholder="Nome de contacto" required>
+        <button id="removeButton">Eliminar Contacto</button><br>
+        <br>
+    </div>
+  </aside>
+
+    <div id="cal-wrap">
+      <!-- SELECTOR DE DATA -->
+      <div id="cal-date">
+        <select id="cal-mth"></select>
+        <select id="cal-yr"></select>
+      </div>
+
+      <!-- CONTAINER DO CALENDARIO -->
+      <div id="cal-container"></div>
+
+      <!-- (C) EVENT FORM -->
+      <form id="cal-event">
+        <h1 id="evt-head"></h1>
+        <div id="evt-date"></div>
+        <textarea id="evt-details" required></textarea>
+        <input id="evt-close" type="button" value="Fechar"/>
+        <input id="evt-del" type="button" value="Eliminar"/>
+        <input id="evt-save" type="submit" value="Salvar"/>
+      </form>
+    </div>
+
+
+  </body>
+</html>
